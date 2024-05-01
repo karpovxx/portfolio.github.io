@@ -364,6 +364,9 @@ template {
   font-size: 16px;
   line-height: 24px;
 }
+.title_fz36 {
+  font-size: 36px;
+}
 .title_fz48 {
   padding-top: 5px;
   font-size: 48px;
@@ -383,7 +386,7 @@ template {
 }
 
 .sidepanel {
-  position: fixed;
+  position: absolute;
   top: 210px;
   left: 50px;
   display: -webkit-box;
@@ -645,6 +648,86 @@ template {
   height: 30px;
   width: 30px;
   fill: #fff;
+}
+
+.aboutme {
+  height: 1440px;
+}
+.aboutme__wrapper {
+  margin: 150px 0 150px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.aboutme__block {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: block;
+}
+.aboutme__photo {
+  height: 550px;
+  border-radius: 15px;
+}
+.aboutme__down {
+  border-radius: 15px;
+}
+.aboutme__title {
+  color: #000;
+  margin-left: 100px;
+  padding: 10px 0 10px 0;
+}
+.aboutme__subtitle {
+  position: absolute;
+  color: #000;
+  margin-left: 100px;
+  top: 10px;
+  position: relative;
+  padding-left: 10px;
+  z-index: 2;
+}
+.aboutme__subtitle:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -25%;
+  left: 0;
+  border-radius: 100px;
+  width: 36px;
+  height: 36px;
+  background: #FFA501;
+}
+.aboutme__subtitle:before {
+  content: "";
+  top: -5px;
+}
+.aboutme__line {
+  margin-left: 100px;
+}
+.aboutme__text {
+  margin-left: 100px;
+  padding: 20px 0 20px 0;
+  font-size: 18px;
+}
+.aboutme__text__work {
+  font-size: 18px;
+  width: 300px;
+}
+.aboutme__wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.line {
+  width: 60px;
+  height: 3px;
+  background: #FFA501;
 }
 
 * {
