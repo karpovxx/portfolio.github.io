@@ -1,0 +1,50 @@
+ .sidepanel {
+    position: fixed;
+    top: 210px;
+    left: 50px;
+    display: flex;
+    height: 360px;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 3;
+    color: $text-color;
+    align-items: center;
+    font-weight: 500;
+    &__divider {
+        margin-top: 10px;
+        height: 70px;
+        width: 2px;
+        background-color: $text-color;
+    }
+    &__text {
+        padding-top: 13px;
+        height: 150px;
+        width: 25px;
+        span {
+            display: block;
+            transform: rotate(-90deg) translate(-30%, -260%);
+            width: 150px;  
+        }
+}
+#telegram {
+    height: 20px;
+    width: 20px;
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+}
+#github {
+    height: 20px;
+    width: 20px;
+    transform: rotate(-90deg); 
+    display: flex;
+    align-items: center;   
+}
+#instagram {
+    height: 20px;
+    width: 20px;
+    transform: rotate(-90deg); 
+    display: flex;
+    align-items: center;    
+}
+}
