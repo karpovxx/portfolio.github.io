@@ -350,30 +350,6 @@ template {
   border: none;
 }
 
-#telegram {
-  height: 20px;
-  width: 20px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  left: 0;
-}
-
-#github {
-  height: 20px;
-  width: 20px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  left: 0;
-}
-
-#instagram {
-  height: 20px;
-  width: 20px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  left: 0;
-}
-
 .title {
   font-weight: bold;
   font-size: 36px;
@@ -444,7 +420,7 @@ template {
           transform: rotate(-90deg) translate(-30%, -260%);
   width: 150px;
 }
-.sidepanel #telegram {
+.sidepanel #side_telegram {
   height: 20px;
   width: 20px;
   -webkit-transform: rotate(-90deg);
@@ -456,7 +432,7 @@ template {
       -ms-flex-align: center;
           align-items: center;
 }
-.sidepanel #telegram img:hover {
+.sidepanel #side_telegram img:hover {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   width: 25px;
@@ -464,7 +440,7 @@ template {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.sidepanel #github {
+.sidepanel #side_github {
   height: 20px;
   width: 20px;
   -webkit-transform: rotate(-90deg);
@@ -476,7 +452,7 @@ template {
       -ms-flex-align: center;
           align-items: center;
 }
-.sidepanel #github img:hover {
+.sidepanel #side_github img:hover {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   width: 25px;
@@ -484,7 +460,7 @@ template {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.sidepanel #instagram {
+.sidepanel #side_instagram {
   height: 20px;
   width: 20px;
   -webkit-transform: rotate(-90deg);
@@ -496,13 +472,179 @@ template {
       -ms-flex-align: center;
           align-items: center;
 }
-.sidepanel #instagram img:hover {
+.sidepanel #side_instagram img:hover {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   width: 25px;
   height: 25px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.hamburger {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  height: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 30px;
+  background: #fff;
+}
+.hamburger span.long {
+  width: 36px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+.menu.active {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  opacity: 1;
+  left: 0;
+  visibility: visible;
+}
+.menu__block {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  position: relative;
+  width: 345px;
+  height: 100%;
+  background-color: #FFA501;
+  padding-top: 140px;
+  padding-left: 40px;
+  z-index: 11;
+}
+.menu__close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+.menu__list {
+  list-style-type: none;
+  padding-left: 35px;
+}
+.menu__link {
+  position: relative;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 15px;
+}
+.menu__link:before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 10px;
+  border-radius: 100%;
+  border: 1px solid #000;
+  height: 15px;
+  width: 15px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.menu__link:hover {
+  font-size: 25px;
+}
+.menu__link:hover:before {
+  background: #fff;
+}
+.menu__link a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu__social {
+  position: absolute;
+  width: 115px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.menu__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+  z-index: 10;
+  background-color: #000;
+}
+
+#menu_telegram {
+  height: 25px;
+  width: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#menu_telegram:hover {
+  height: 30px;
+  width: 30px;
+  fill: #fff;
+}
+
+#menu_github {
+  height: 25px;
+  width: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#menu_github:hover {
+  height: 30px;
+  width: 30px;
+  fill: #fff;
+}
+
+#menu_instagram {
+  height: 25px;
+  width: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#menu_instagram:hover {
+  height: 30px;
+  width: 30px;
+  fill: #fff;
 }
 
 * {
