@@ -1,57 +1,26 @@
 .aboutme {
-    height: 1440px;
     &__wrapper {
-        margin: 150px 0 150px 0;
-        display: flex;
-        justify-content: space-between;
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: 430px 640px;
+        column-gap: 40px;
     }
-    &__block {
-        align-content: center;
-        display: block;
-    }
-    
     &__photo {
-        height: 550px;
+        height: 400px;
         border-radius: 15px;
-    }
-    &__down {
-        border-radius: 15px;
-    }
-    &__title {
-        color: $base-color;
-        margin-left: 100px;
-        padding: 10px 0 10px 0;
-    }
-    &__subtitle {
-        position: absolute;
-        color: $base-color;
-        margin-left: 100px;
-        top: 10px;
-        position: relative;
-        padding-left: 10px;
-        z-index: 2;
-        @include before_circle;
-        &:before {
-            content: '';
-            top: -5px;
-        }
-    }
-    &__line {
-        margin-left: 100px;
-    }
-    &__text {
-        margin-left: 100px;
-        padding: 20px 0 20px 0;
-        font-size: 18px;
-        &__work {
-            font-size: 18px;
-            width: 300px;
-        }
     }
     &__wrapp {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        column-gap: 20px;
+        grid-template-rows: auto-fill, minmax(120px, auto);
+        padding-top: 30px;
     }
-
+    &__subtitle {
+        color: $base-color;
+        @include before_circle;
+    }
+    &__text {
+        padding-top: 20px;
+    }
 }
- 
