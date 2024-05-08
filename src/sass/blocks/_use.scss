@@ -39,8 +39,10 @@
         min-height: 270px;
         border: 1px solid $base-color;
         padding: 30px;
+        transition: all 0.6s;
         &__title {
             color: $base-color;
+            
         }
         &__text {
             display: block;
