@@ -14,7 +14,7 @@
         grid-template-columns: repeat(2, 300px);
         column-gap: 20px;
         grid-template-rows: auto-fill, minmax(120px, auto);
-        padding-top: 30px;
+        padding-top: 30px;     
     }
     &__subtitle {
         color: $base-color;
@@ -25,3 +25,4 @@
         padding-top: 20px;
     }
 }
+ 

@@ -1,0 +1,114 @@
+@media (max-width: 1350px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 1200px) { 
+    .container {
+        max-width: 960px;
+    }  
+    .aboutme {
+        &__wrapper {
+            grid-template-columns: 375px 520px;
+            column-gap: 50px;
+        }
+        &__photo {
+            margin: 0 auto;
+            height: 350px;
+        }
+        &__wrapp {
+            grid-template-columns: repeat(2, 250px);
+        }
+    }      
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .title {
+        &_fz36 {
+            font-size: 30px;
+        }
+    }
+    .aboutme {
+        &__wrapper {
+            margin-top: 60px;
+            grid-template-columns: 300px 380px;
+        }
+        &__wrapp {
+            padding-top: 0;
+            grid-template-columns: 360px;
+            grid-auto-rows: minmax(115, auto);
+        }
+        &__wrap {
+            padding-top: 20px;
+        }
+        &__photo {
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .aboutme {
+        &__wrapper {
+            margin-top: 40px;
+            grid-template-columns: 400px;
+            justify-content: center;
+        }
+        &__wrapp {
+            padding-top: 0;
+            grid-template-columns: 400px;
+        }
+        &__wrap {
+            padding-top: 20px;
+        }
+        &__block {
+            margin-top: 40px;
+        }
+        &__photo {
+            height: 390px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .aboutme {
+        &__wrapper {
+            grid-template-columns: 380px;
+            column-gap: 0;
+            justify-content: center;
+            margin-top:40px ;
+        }
+        &__wrapp {
+            padding-top: 0;
+            grid-template-columns: 300px;
+        }
+        
+        &__title {
+            font-size: 25px;
+        }
+        &__block {
+            width: 300px;
+            margin: auto;
+            margin-top: 40px;
+        }
+       
+        &__photo {
+            height: 300px;
+            margin: 0 auto;
+        }
+    }
+       
+   
+
+}

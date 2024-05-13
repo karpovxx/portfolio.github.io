@@ -1,8 +1,11 @@
 .promo {
     min-height: 100vh;
     position: relative;
-    background: url(../img/main_bg.png) center (center/cover) no-repeat;
+    background: url(../img/main__bg.jpg) center (center/cover) no-repeat;
     padding-top: 205px;
+    &__wrapper {
+        margin-left: 0;
+    }
     &__title {
         width: 535px;
         margin-top: 10px;
@@ -16,12 +19,15 @@
     &__btns {
         font-weight: 600;
         margin-top: 25px;
-        display: flex;
+        display: grid;
         width: 250px;
+        grid-template-columns: repeat(2, 140px);
+        column-gap: 20px;
         align-items: center;
         justify-content:space-between;
     }
     &__link {
+        text-align: center;
         color: $text-color;
         cursor: pointer;
         &:hover {
