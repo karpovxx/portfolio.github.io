@@ -84,6 +84,7 @@
     }
     &__item {
         position: relative;
+        width: 100%;
         &:before {
             content: '';
             height: 1px;

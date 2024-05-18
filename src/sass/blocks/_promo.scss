@@ -1,7 +1,7 @@
 .promo {
     min-height: 100vh;
     position: relative;
-    background: url(../img/main__bg.jpg) center (center/cover) no-repeat;
+    background: url(../img/bg/main.png) center (center/cover) no-repeat;
     padding-top: 205px;
     &__wrapper {
         margin-left: 0;
@@ -38,5 +38,12 @@
 
         }
     }
+   /*  &__color1 {
+        -webkit-text-stroke: 1.5px green;
+        text-shadow: px green;
+    }
+    &__color2 {
+        -webkit-text-stroke: 0.5px green;
+    } */
 }
  
