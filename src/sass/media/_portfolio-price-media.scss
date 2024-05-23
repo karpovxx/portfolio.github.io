@@ -1,0 +1,99 @@
+@media (max-width: 1350px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 1200px) { 
+    .container {
+        max-width: 960px;
+    }   
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-template-rows: 280px;
+            justify-content: space-around;
+            row-gap: 35px;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            } 
+            .horizontal {
+                grid-row: 5 / 6;
+            }
+        }
+        &__item {
+            img {
+                max-height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .price {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 350px);
+            padding: 50px 20px;
+        }
+        &__blocks {
+            grid-template: repeat(2, minmax(40px, auto)) / repeat(auto-fit, 300px);
+            &-text {
+                width: 300px;
+            }
+            &-item {
+                grid-template: minmax(21px, auto) / 156px 120px;
+            }
+        }
+         
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .portfolio {
+        padding-top: 60px;
+    }
+    .price {
+        &__blocks {
+            justify-content: center;
+            grid-template: repeat(2, minmax(40px, auto)) / repeat(auto-fit, 350px);
+        &-text {
+            width: 350px;
+        }
+        &-item {
+            grid-template: minmax(21px, auto) / 200px 100px;
+        }
+        }
+        &__title {
+        margin-bottom: 20px;
+        }
+         
+    }
+     
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .price {
+        &__blocks {
+            justify-content: center;
+            grid-template: repeat(2, minmax(40px, auto)) / repeat(auto-fit, 300px);
+        &-text {
+            width: 325px;
+        }
+        &-item {
+            grid-template: minmax(21px, auto) / 175px 100px;
+        }
+        }
+    }
+}
